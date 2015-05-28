@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:composite="http://java.sun.com/jsf/composite">
+
+    <composite:interface>
+        <composite:attribute name="actionLabel" />
+        <composite:attribute name="actionMethod"
+            method-signature="java.lang.String action()" />
+        <composite:attribute name="resetLabel" />
+    </composite:interface>
+
+    <composite:implementation>
+        <h:commandButton value="#{cc.attrs.actionLabel}" action="#{cc.attrs.actionMethod}" />
+        <h:commandButton value="#{cc.attrs.resetLabel}" type="reset" />
+    </composite:implementation>
+</html>

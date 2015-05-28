@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" > <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" > <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" > <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="generator" content="pandoc" />
+  <meta name="description" content="JSF" />
+  <meta name="author" content="Adolfo Sanz De Diego" />
+  <title>JSF</title>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+
+  <!-- deck core css -->
+  <link rel="stylesheet" href="../lib/deck.js-master/core/deck.core.css">
+
+  <!-- deck extensions css -->
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/scale/deck.scale.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/status/deck.status.css">
+
+  <!-- deck slide theme css -->
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/web-2.0.css">
+  <!--
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/neon.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/swiss.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/web-2.0.css">
+  -->
+
+  <!-- deck slide transition css -->
+  <link rel="stylesheet" href="../lib/deck.js-transition-cube-master/cube.css">
+  <!--
+  <link rel="stylesheet" href="../lib/deck.js-transition-cube-master/cube.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/transition/fade.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/transition/horizontal-slide.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/transition/vertical-slide.css">
+  -->
+
+  <!-- custom css just for this page -->
+  <style>
+    figcaption {
+      display: none;
+      visibility:hidden;
+    }
+
+    #titlepage, #documentauthor, #documentdate {
+      text-align: center;
+    }
+
+    #titlepage {
+      font-size: 5.25em;
+      padding-top: 15%;
+    }
+
+    #documentauthor {
+      font-size: 2.25em;
+    }
+
+    #documentdate {
+      font-size: 1.25em;
+    }
+  </style>
+
+  <!-- modernizr deck js  -->
+  <script src="../lib/deck.js-master/modernizr.custom.js"></script>
+
+</head>
+<body class="deck-container">
+<section class="slide">
+  <h2 id="titlepage">JSF</h2>
+  <h3 id="documentauthor">Adolfo Sanz De Diego</h3>
+  <h4 id="documentdate">Junio 2013</h4>
+</section>
+
+<section id="acerca-de" class="titleslide slide level1"><h1><span class="header-section-number">1</span> Acerca de</h1></section><section id="pronoide" class="slide level2">
+<h2><span class="header-section-number">1.1</span> Pronoide</h2>
+<figure>
+<img src="../img/logo-pronoide.png" alt="Pronoide" /><figcaption>Pronoide</figcaption>
+</figure>
+<ul>
+<li><p>Pronoide consolida sus servicios de formación superando las <strong>22.000 horas impartidas</strong> en más de 500 cursos (Diciembre 2011)</p></li>
+<li><p>En la vorágine de <strong>tecnologías y marcos de trabajo existentes</strong> <strong>para la plataforma Java</strong>, una empresa dedica demasiado esfuerzo en analizar, comparar y finalmente decidir cuáles son los pilares sobre los que construir sus proyectos.</p></li>
+<li><p>Nuestros Servicios de Formación Java permiten ayudarle en esta tarea, transfiriéndoles nuestra <strong>experiencia real de más de 10 años</strong>.</p></li>
+</ul>
+</section><section id="autor" class="slide level2">
+<h2><span class="header-section-number">1.2</span> Autor</h2>
+<ul>
+<li><strong>Adolfo Sanz De Diego</strong>
+<ul>
+<li>Correo: <a href="mailto:asanzdiego@gmail.com">asanzdiego@gmail.com</a></li>
+<li>Twitter: <span class="citation" data-cites="asanzdiego">[@asanzdiego]</span>(http://twitter.com/asanzdiego)</li>
+<li>Linkedin: <a href="http://www.linkedin.com/in/asanzdiego">http://www.linkedin.com/in/asanzdiego</a></li>
+<li>Blog: <a href="http://asanzdiego.blogspot.com.es">http://asanzdiego.blogspot.com.es</a></li>
+</ul></li>
+</ul>
+</section><section id="licencia" class="slide level2">
+<h2><span class="header-section-number">1.3</span> Licencia</h2>
+<ul>
+<li><strong>Este obra está bajo una licencia:</strong>
+<ul>
+<li><a href="http://creativecommons.org/licenses/by-sa/3.0/es/">Creative Commons Reconocimiento-CompartirIgual 3.0</a></li>
+</ul></li>
+<li><strong>El código fuente de los programas están bajo una licencia:</strong>
+<ul>
+<li><a href="http://www.viti.es/gnu/licenses/gpl.html">GPL 3.0</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="introducción" class="titleslide slide level1"><h1><span class="header-section-number">2</span> Introducción</h1></section><section id="objetivo" class="slide level2">
+<h2><span class="header-section-number">2.1</span> Objetivo</h2>
+<ul>
+<li><p>El objetivo de JSF es <strong>desarrollar aplicaciones web</strong> de forma parecida a como se construyen <strong>aplicaciones de escritorio</strong> con Swing, AWT, SWT.</p></li>
+<li><p>JSF gestiona las acciones producidas por el usuario en su página HTML, las traduce a <strong>eventos que son enviados al servidor</strong>, y regenera la página original con los cambios provocados por dichas acciones.</p></li>
+</ul>
+</section><section id="características" class="slide level2">
+<h2><span class="header-section-number">2.2</span> Características</h2>
+<ul>
+<li>Representar componentes de interfaz de usuario y manejar su estado.</li>
+<li>Manejar eventos.</li>
+<li>Validar y convertir datos.</li>
+<li>Definir la navegación entre páginas.</li>
+<li>Soportar internacionalización.</li>
+<li>Soportar AJAX.</li>
+<li>Extender todas estas características.</li>
+</ul>
+</section><section id="novedades-jsf-2.0" class="slide level2">
+<h2><span class="header-section-number">2.3</span> Novedades JSF 2.0</h2>
+<ul>
+<li>Facelets (mecanismo de plantillas).</li>
+<li>Soporte nativo Ajax.</li>
+<li>Navegación implicita (convención sobre configuración).</li>
+<li>Navegación condicional.</li>
+<li>Uso intensivo de anotaciones.</li>
+<li>Project Stage (etapa del proyecto: desarrollo, producción, etc.)</li>
+<li>Mejora de la validación.</li>
+<li>Mejora la gestión de errores.</li>
+<li>Añadido ResourceBundles como bean.</li>
+<li>Carga de recursos (imágenes, CSS, JavaScripts...)</li>
+<li>Componentes compuestos</li>
+</ul>
+</section><section id="implementaciones" class="slide level2">
+<h2><span class="header-section-number">2.4</span> Implementaciones</h2>
+<ul>
+  <li>
+<strong><a href="http://javaserverfaces.java.net/">Mojarra</a></strong>, la implementación de referencia de Oracle<br /> <a href="http://javaserverfaces.java.net/"><img 
+      src="../img/jsf-logo-mojarra.png" alt="Mojarra"></a>
+</li>
+  <li>
+<strong><a href="http://myfaces.apache.org/">MyFaces</a></strong>, la implementación de referencia de Apache<br /> <a href="http://myfaces.apache.org/"><img 
+      src="../img/jsf-logo-myfaces.png" alt="MyFaces"></a>
+</li>
+</ul>
+
+</section><section id="extensiones" class="slide level2">
+<h2><span class="header-section-number">2.5</span> Extensiones</h2>
+<p><a href="http://www.jboss.org/richfaces"><img src="../img/jsf-logo-richfaces.png" alt="RichFaces"></a> <a href="http://www.icesoft.org/projects/ICEfaces/overview.jsf"><img src="../img/jsf-logo-icefaces.png" alt="ICEfaces"></a> <a href="http://www.primefaces.org/"><img src="../img/jsf-logo-primefaces.png" alt="PrimeFaces"></a> <a href="http://www.openfaces.org/"><img src="../img/jsf-logo-openfaces.png" alt="OpenFaces"></a></p>
+</section><section id="model-view-controller" class="slide level2">
+<h2><span class="header-section-number">2.6</span> Model-View-Controller</h2>
+<figure>
+<img src="../img/jsf-mvc.png" alt="JSF MVC" /><figcaption>JSF MVC</figcaption>
+</figure>
+</section><section id="arquitectura" class="slide level2">
+<h2><span class="header-section-number">2.7</span> Arquitectura</h2>
+<ul>
+<li>Clases Java:
+<ul>
+<li>Componentes UI
+<ul>
+<li>estándares: botón, checkbox, label, etc.</li>
+<li>personalizados: ya sean de librerías externas o propios.</li>
+</ul></li>
+<li>FacesServlet (Front Controler declarado en el web.xml)</li>
+<li>Conversores de tipo</li>
+<li>Validadores</li>
+</ul></li>
+<li>Tags Libraries:
+<ul>
+<li>Estándares -&gt; <a href="http://horstmann.com/corejsf/jsf-tags.html">http://horstmann.com/corejsf/jsf-tags.html</a></li>
+<li>Personalidadas.</li>
+<li>Usadas en JSP y Facelets.</li>
+</ul></li>
+<li>Archivos de configuración (faces-config.xml):
+<ul>
+<li>Define Managed Beans.</li>
+<li>Define la navegación entre páginas.</li>
+</ul></li>
+</ul>
+</section>
+<section id="instalación" class="titleslide slide level1"><h1><span class="header-section-number">3</span> Instalación</h1></section><section id="mojarra-vs-myfaces" class="slide level2">
+<h2><span class="header-section-number">3.1</span> Mojarra VS MyFaces</h2>
+<ul>
+<li>Yo voy a usar <strong>MyFaces</strong>, ¿por qué? por, entre otras, estas <a href="http://lu4242.blogspot.com.es/2011/06/10-reason-why-choose-myfaces-core-as.html">10 razones</a></li>
+</ul>
+</section><section id="maven" class="slide level2">
+<h2><span class="header-section-number">3.2</span> Maven</h2>
+<ul>
+<li>Buscamos los archetypes de <a href="http://myfaces.apache.org">http://myfaces.apache.org</a>:</li>
+</ul>
+<pre><code>mvn archetype:generate -DarchetypeCatalog=http://myfaces.apache.org</code></pre>
+<ul>
+<li>Y seleccionamos:</li>
+</ul>
+<pre><code>org.apache.myfaces.buildtools:myfaces-archetype-helloworld20
+(Archetype to create a new webapp based on MyFaces 2.0)</code></pre>
+<ul>
+<li>Y respondemos a las preguntas:</li>
+</ul>
+<pre><code>Define value for property &#39;groupId&#39;: : com.company
+Define value for property &#39;artifactId&#39;: : project-name
+Define value for property &#39;version&#39;:  1.0-SNAPSHOT: :
+Define value for property &#39;package&#39;:  com.company: : com.company.proyectname</code></pre>
+</section><section id="eclipse-i" class="slide level2">
+<h2><span class="header-section-number">3.3</span> Eclipse (I)</h2>
+<ul>
+<li>Import...</li>
+</ul>
+<pre><code>Existing Maven Projects</code></pre>
+<ul>
+<li>Añadir dependencias al pom.xml</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;dependency&gt;</span>
+    <span class="kw">&lt;groupId&gt;</span>org.apache.myfaces.core<span class="kw">&lt;/groupId&gt;</span>
+    <span class="kw">&lt;artifactId&gt;</span>myfaces-api<span class="kw">&lt;/artifactId&gt;</span>
+    <span class="kw">&lt;version&gt;</span>${jsf-myfaces.version}<span class="kw">&lt;/version&gt;</span>
+    <span class="kw">&lt;scope&gt;</span>compile<span class="kw">&lt;/scope&gt;</span>
+<span class="kw">&lt;/dependency&gt;</span>
+<span class="kw">&lt;dependency&gt;</span>
+    <span class="kw">&lt;groupId&gt;</span>org.apache.myfaces.core<span class="kw">&lt;/groupId&gt;</span>
+    <span class="kw">&lt;artifactId&gt;</span>myfaces-impl<span class="kw">&lt;/artifactId&gt;</span>
+    <span class="kw">&lt;version&gt;</span>${jsf-myfaces.version}<span class="kw">&lt;/version&gt;</span>
+    <span class="kw">&lt;scope&gt;</span>runtime<span class="kw">&lt;/scope&gt;</span>
+<span class="kw">&lt;/dependency&gt;</span></code></pre>
+</section><section id="eclipse-ii" class="slide level2">
+<h2><span class="header-section-number">3.4</span> Eclipse (II)</h2>
+<ul>
+<li>Botón derecho en el proyecto &gt; Properties &gt; Project Facets</li>
+</ul>
+<pre><code>Configuration: JavaServer Faces 2.1 Project</code></pre>
+<ul>
+<li>Further configuration available</li>
+</ul>
+<pre><code>Content directory: src/main/webapp</code></pre>
+<ul>
+<li>Luego:</li>
+</ul>
+<pre><code>Type: Disable Library Configuration</code></pre>
+</section><section id="eclipse-iii" class="slide level2">
+<h2><span class="header-section-number">3.5</span> Eclipse (III)</h2>
+<ul>
+<li>Botón derecho en el proyecto &gt; Properties &gt; Deployment Assembly</li>
+</ul>
+<pre><code>Add... &gt; Java Build Path Entries &gt; Maven Dependencies</code></pre>
+</section><section id="facesservlet-en-el-web.xml" class="slide level2">
+<h2><span class="header-section-number">3.6</span> FacesServlet en el web.xml</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="co">&lt;!-- Faces Servlet --&gt;</span>
+<span class="kw">&lt;servlet&gt;</span>
+    <span class="kw">&lt;servlet-name&gt;</span>Faces Servlet<span class="kw">&lt;/servlet-name&gt;</span>
+    <span class="kw">&lt;servlet-class&gt;</span>javax.faces.webapp.FacesServlet<span class="kw">&lt;/servlet-class&gt;</span>
+    <span class="kw">&lt;load-on-startup&gt;</span>1<span class="kw">&lt;/load-on-startup&gt;</span>
+<span class="kw">&lt;/servlet&gt;</span>
+
+<span class="co">&lt;!-- Faces Servlet Mapping --&gt;</span>
+<span class="kw">&lt;servlet-mapping&gt;</span>
+    <span class="kw">&lt;servlet-name&gt;</span>Faces Servlet<span class="kw">&lt;/servlet-name&gt;</span>
+    <span class="kw">&lt;url-pattern&gt;</span>*.jsf<span class="kw">&lt;/url-pattern&gt;</span>
+<span class="kw">&lt;/servlet-mapping&gt;</span>
+
+<span class="co">&lt;!-- Welcome files --&gt;</span>
+<span class="kw">&lt;welcome-file-list&gt;</span>
+    <span class="kw">&lt;welcome-file&gt;</span>index.html<span class="kw">&lt;/welcome-file&gt;</span>
+<span class="kw">&lt;/welcome-file-list&gt;</span></code></pre>
+</section><section id="propiedad-project_stage-del-web.xml" class="slide level2">
+<h2><span class="header-section-number">3.7</span> Propiedad PROJECT_STAGE del web.xml</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;context-param&gt;</span>
+    <span class="kw">&lt;description&gt;</span>Project stage for the application (new in 2.0). Expects one of
+        the following values: Development, Production, SystemTest, UnitTest
+    <span class="kw">&lt;/description&gt;</span>
+    <span class="kw">&lt;param-name&gt;</span>javax.faces.PROJECT_STAGE<span class="kw">&lt;/param-name&gt;</span>
+    <span class="kw">&lt;param-value&gt;</span>Development<span class="kw">&lt;/param-value&gt;</span>
+<span class="kw">&lt;/context-param&gt;</span></code></pre>
+<ul>
+<li>Por ejemplo, en MyFaces, si está en modo &quot;Development&quot; usa un página de error con mucha información, pero si está en modo &quot;Production&quot; usa las páginas de error estándar (404.html, 500.html) que tengas definidas (ya se en servidor de aplicaciones o en la propia aplicación)</li>
+</ul>
+</section><section id="páginas-de-error" class="slide level2">
+<h2><span class="header-section-number">3.8</span> Páginas de error</h2>
+<ul>
+<li>Si quieres definir tus propias páginas de error para tu aplicación (y no usar las del servidor de aplicaciones) deberás indicarlo en el web.xml</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;error-page&gt;</span>
+    <span class="kw">&lt;error-code&gt;</span>500<span class="kw">&lt;/error-code&gt;</span>
+    <span class="kw">&lt;location&gt;</span>/500.html<span class="kw">&lt;/location&gt;</span>
+<span class="kw">&lt;/error-page&gt;</span></code></pre>
+</section>
+<section id="managed-beans" class="titleslide slide level1"><h1><span class="header-section-number">4</span> Managed Beans</h1></section><section id="declaración" class="slide level2">
+<h2><span class="header-section-number">4.1</span> Declaración</h2>
+<ul>
+<li><p>Un Managed Bean es simplemente un POJO, que en JSF mapea los datos de una página.</p></li>
+<li><p>Se pueden configurar mediante <strong>anotaciones</strong> o en <strong>/WEB-INF/faces-config.xml</strong></p></li>
+</ul>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@ManagedBean</span>(name=<span class="st">&quot;holaBean&quot;</span>)
+<span class="fu">@SessionScoped</span>
+<span class="kw">public</span> <span class="kw">class</span> HolaBean <span class="kw">implements</span> Serializable {
+
+  <span class="kw">private</span> String nombre;
+
+  <span class="kw">public</span> <span class="fu">holaBean</span>() { }
+
+  <span class="co">// getters y setters</span>
+}</code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;managed-bean&gt;</span>
+  <span class="kw">&lt;managed-bean-name&gt;</span>holaBean<span class="kw">&lt;/managed-bean-name&gt;</span>
+  <span class="kw">&lt;managed-bean-class&gt;</span>mipaquete.HolaBean<span class="kw">&lt;/managed-bean-class&gt;</span>
+  <span class="kw">&lt;managed-bean-scope&gt;</span>session<span class="kw">&lt;/managed-bean-&gt;</span>
+<span class="kw">&lt;/managed-bean&gt;</span></code></pre>
+</section><section id="inicializar-propiedades" class="slide level2">
+<h2><span class="header-section-number">4.2</span> Inicializar propiedades</h2>
+<ul>
+<li>En &lt;value&gt; podemos hacer referencia a otro bean con expresiones del tipo #{otroBean.otraPropiedad}.</li>
+</ul>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@ManagedBean</span>
+<span class="fu">@SessionScoped</span>
+<span class="kw">public</span> <span class="kw">class</span> UserBean {
+  <span class="fu">@ManagedProperty</span>(value=<span class="st">&quot;Ana&quot;</span>)
+  <span class="kw">private</span> String name
+  ...
+}</code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;managed-bean&gt;</span>
+  <span class="kw">&lt;managed-bean-name&gt;</span>userBean<span class="kw">&lt;/managed-bean-name&gt;</span>
+  <span class="kw">&lt;managed-bean-class&gt;</span>com.examples.UserBean<span class="kw">&lt;/managed-bean-class&gt;</span>
+  <span class="kw">&lt;managed-bean-scope&gt;</span>session<span class="kw">&lt;/managed-bean-scope&gt;</span>
+  <span class="kw">&lt;managed-property&gt;</span>
+    <span class="kw">&lt;property-name&gt;</span>name<span class="kw">&lt;/property-name&gt;</span>
+    <span class="kw">&lt;value&gt;</span>Ana<span class="kw">&lt;/value&gt;</span>
+  <span class="kw">&lt;/managed-property&gt;</span>
+<span class="kw">&lt;/managed-bean&gt;</span></code></pre>
+</section><section id="inicializar-un-array-o-un-list" class="slide level2">
+<h2><span class="header-section-number">4.3</span> Inicializar un array o un List</h2>
+<ul>
+<li>Sólo desde faces-config.xml</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;managed-property&gt;</span>
+  <span class="kw">&lt;property-name&gt;</span>numHabitaciones<span class="kw">&lt;/property-name&gt;</span>
+  <span class="kw">&lt;list-entries&gt;</span>
+    <span class="kw">&lt;value-class&gt;</span>java.lang.Integer<span class="kw">&lt;/value-class&gt;</span>
+    <span class="kw">&lt;value&gt;</span>1<span class="kw">&lt;/value&gt;</span>
+    <span class="kw">&lt;value&gt;</span>2<span class="kw">&lt;/value&gt;</span>
+    <span class="kw">&lt;value&gt;</span>3<span class="kw">&lt;/value&gt;</span>
+  <span class="kw">&lt;/list-entries&gt;</span>
+<span class="kw">&lt;/managed-property&gt;</span></code></pre>
+<ul>
+<li>Para acceder desde nuestra página JSF:</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:outputText</span><span class="ot"> value=</span><span class="st">&quot;#{userBean.numHabitaciones[2]}&quot;</span><span class="kw">/&gt;</span></code></pre>
+</section><section id="inicializar-un-map" class="slide level2">
+<h2><span class="header-section-number">4.4</span> Inicializar un Map</h2>
+<ul>
+<li>Sólo desde faces-config.xml</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;managed-property&gt;</span>
+  <span class="kw">&lt;property-name&gt;</span>semaforo<span class="kw">&lt;/property-name&gt;</span>
+  <span class="kw">&lt;map-entries&gt;</span>
+    <span class="kw">&lt;map-entry&gt;</span>
+      <span class="kw">&lt;key&gt;</span>Rojo<span class="kw">&lt;/key&gt;</span>
+      <span class="kw">&lt;value&gt;</span>No puedes continuar<span class="kw">&lt;/value&gt;</span>
+    <span class="kw">&lt;/map-entry&gt;</span>
+    <span class="kw">&lt;map-entry&gt;</span>
+      <span class="kw">&lt;key&gt;</span>Verde<span class="kw">&lt;/key&gt;</span>
+      <span class="kw">&lt;value&gt;</span>Puedes continuar<span class="kw">&lt;/value&gt;</span>
+    <span class="kw">&lt;/map-entry&gt;</span>
+  <span class="kw">&lt;/map-entries&gt;</span>
+<span class="kw">&lt;/managed-property&gt;</span></code></pre>
+<ul>
+<li>Para acceder desde nuestra página JSF:</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:outputText</span><span class="ot"> value=</span><span class="st">&quot;#{userBean.semaforo[&#39;Verde&#39;]}&quot;</span><span class="kw">/&gt;</span></code></pre>
+</section>
+<section id="bean-scopes" class="titleslide slide level1"><h1><span class="header-section-number">5</span> Bean Scopes</h1></section><section id="definición" class="slide level2">
+<h2><span class="header-section-number">5.1</span> Definición</h2>
+<ul>
+<li><p>Un scope es un <strong>mapeo entre nombres y objetos</strong> que se almacena durante un determinado periodo de tiempo.</p></li>
+<li><p>Se recomienda <strong>utilizar siempre el menor scope que necesite el bean</strong>, para evitar así posibles problemas de memoria.</p></li>
+<li><p>Si declaramos el bean desde el fichero faces-config.xml</p></li>
+</ul>
+<pre><code>&lt;managed-bean-scope&gt;application|session|view|request|none|custom&lt;/managed-bean-scope&gt;</code></pre>
+<ul>
+<li>Si queremos hacerlo con anotaciones:</li>
+</ul>
+<pre class="sourceCode java"><code class="sourceCode java">@{Application|Session|View|Request|None|Custom}Scoped</code></pre>
+</section><section id="application" class="slide level2">
+<h2><span class="header-section-number">5.2</span> Application</h2>
+<ul>
+<li><p>Con este scope, se guarda la información durante <strong>toda la vida de la aplicación web</strong>, independientemente de todas las peticiones y sesiones que se realicen.</p></li>
+<li><p>Este bean se instancia con la primera petición a la aplicación y desaparece cuando la aplicación web se elimina del servidor.</p></li>
+<li><p>Si queremos que el bean se instancie antes de que se muestre la primera página de la aplicación, usamos la propiedad eager a true.</p></li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;managed-bean</span><span class="ot"> eager=</span><span class="st">&quot;true&quot;</span><span class="kw">&gt;</span></code></pre>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@ManagedBean</span>(eager=<span class="kw">true</span>)</code></pre>
+</section><section id="session" class="slide level2">
+<h2><span class="header-section-number">5.3</span> Session</h2>
+<ul>
+<li><p>Este scope guarda la información <strong>desde que el usuario comienza una sesión</strong> <strong>hasta que ésta termina</strong> (porque el tiempo expiró o se invocó al método invalidate sobre un objeto HttpSession).</p></li>
+<li><p>HTTP es un protocolo sin estado, y por tanto, una vez que se envía una petición al servidor y éste responde, no se guarda ninguna información sobre esta transición.</p></li>
+<li><p>Esto no es siempre adecuado en aplicaciones de lado de servidor, ya que es normal que necesiten ir guardando el estado.</p></li>
+<li><p>Para ello, podemos utilizar:</p>
+<ul>
+<li><strong>Cookies</strong>: pares nombre-valor que el servidor envía al usuario, confiando en que en posteriores peticiones se la vaya &quot;devolviendo&quot;.</li>
+<li><strong>URL rewriting</strong>: añade un identificador de sesión a la URL, y la sesión se guarda en el servidor.</li>
+</ul></li>
+</ul>
+</section><section id="view" class="slide level2">
+<h2><span class="header-section-number">5.4</span> View</h2>
+<ul>
+<li><p>Este scope <strong>dura desde que se muestra una página JSF al usuario</strong> <strong>hasta que el usuario navega hacia otra página</strong>.</p></li>
+<li><p>Es muy útil para páginas que usan <strong>AJAX</strong>.</p></li>
+</ul>
+</section><section id="request" class="slide level2">
+<h2><span class="header-section-number">5.5</span> Request</h2>
+<ul>
+<li><p>Este scope dura lo que <strong>dura una petición request</strong>.</p></li>
+<li><p>Comienza cuando se envía una petición al servidor y termina cuando se devuelve la respuesta al usuario.</p></li>
+<li><p>Esto hace que se cree una instancia del bean asociado para cada petición.</p></li>
+<li><p>Los mensajes de estado y de error que se muestran al usuario son buenos candidatos a ser request, ya que se muestran una vez que el servidor devuelve la respuesta.</p></li>
+</ul>
+</section><section id="none" class="slide level2">
+<h2><span class="header-section-number">5.6</span> None</h2>
+<ul>
+<li>Los beans se instancian cuando son necesitados por otros beans, y se eliminan cuando esta necesidad desaparece.</li>
+</ul>
+</section><section id="custom" class="slide level2">
+<h2><span class="header-section-number">5.7</span> Custom</h2>
+<ul>
+<li><p>También se permite crear scopes personalizados donde el tiempo que dura lo definimos nosotros.</p></li>
+<li><p>La aplicación se vuelve responsable de ir eliminando las instancias de los beans del mapeo.</p></li>
+</ul>
+</section>
+<section id="expression-language" class="titleslide slide level1"><h1><span class="header-section-number">6</span> Expression Language</h1></section><section id="acceder-a-las-propiedades" class="slide level2">
+<h2><span class="header-section-number">6.1</span> Acceder a las propiedades</h2>
+<ul>
+<li>Expression Language (EL) <strong>nos permite acceder a las propiedades y a los métodos</strong> de los beans.</li>
+</ul>
+<pre class="sourceCode XML"><code class="sourceCode xml"><span class="kw">&lt;h:outputText</span><span class="ot"> value=</span><span class="st">&quot;#{userBean.profile}&quot;</span><span class="kw">/&gt;</span></code></pre>
+<ul>
+<li>Podemos <strong>utilizar operadores</strong> aritméticos, lógicos o comprobar si el valor es empty.</li>
+</ul>
+<pre class="sourceCode XML"><code class="sourceCode xml"><span class="kw">&lt;h:outputText</span><span class="ot"> rendered=</span><span class="st">&quot;#{userBean.profile==&#39;VIP&#39;}&quot;</span><span class="ot"> value=</span><span class="st">&quot;Bono regalo de #{bono.base-10} Euros&quot;</span><span class="kw">/&gt;</span></code></pre>
+<ul>
+<li>Podemos <strong>invocar a métodos con parámetros</strong>, siempre que no estén sobrecargados.</li>
+</ul>
+<pre class="sourceCode XML"><code class="sourceCode xml"><span class="kw">&lt;h:commandButton</span><span class="ot"> value=</span><span class="st">&quot;Aceptar&quot;</span><span class="ot"> action=</span><span class="st">&quot;#{userBean.addText(&#39;texto&#39;)}&quot;</span><span class="kw">/&gt;</span></code></pre>
+</section><section id="acceder-a-las-propiedades-desde-java" class="slide level2">
+<h2><span class="header-section-number">6.2</span> Acceder a las propiedades desde Java</h2>
+<pre class="sourceCode java"><code class="sourceCode java">FacesContext ctx = FacesContext.<span class="fu">getCurrentInstance</span>();
+Application app = ctx.<span class="fu">getApplication</span>( );</code></pre>
+<pre class="sourceCode java"><code class="sourceCode java">ELContext ec = ctx.<span class="fu">getELContext</span>( );
+String name = (String) app.<span class="fu">evaluateValueExpressionGet</span>(ctx,<span class="st">&quot;#{userBean.name}&quot;</span>,String.<span class="fu">class</span>);</code></pre>
+<pre class="sourceCode java"><code class="sourceCode java">ExpressionFactory ef = app.<span class="fu">getExpressionFactory</span>( );
+ValueExpression ve =.<span class="fu">ef</span>.<span class="fu">createValueExpression</span>(ec,<span class="st">&quot;#{userBean.name}&quot;</span>,String.<span class="fu">class</span>);
+name = (String) ve.<span class="fu">getValue</span>(ec);
+ve.<span class="fu">setValue</span>(ec, <span class="st">&quot;Serena&quot;</span>);</code></pre>
+<pre class="sourceCode java"><code class="sourceCode java">ExpressionFactory ef = app.<span class="fu">getExpressionFactory</span>( );
+ValueExpression ve = ef.<span class="fu">createValueExpression</span>(ec,<span class="st">&quot;#{userBean}&quot;</span>,UserBean.<span class="fu">class</span>);
+UserBean ub = (UserBean) ve.<span class="fu">getValue</span>(ec);
+ub.<span class="fu">setName</span>(<span class="st">&quot;Serena&quot;</span>);</code></pre>
+</section><section id="objectos-implícitos-i" class="slide level2">
+<h2><span class="header-section-number">6.3</span> Objectos implícitos (I)</h2>
+<ul>
+<li>Son unos objetos que ya vienen predefinidos:
+<ul>
+<li><strong>#{application}</strong>: el ServletContext.</li>
+<li><strong>#{facesContext}</strong>: el FacesContext actual.</li>
+<li><strong>#{session}</strong>: el HttpSession actual.</li>
+<li><strong>#{request}</strong>: el HttpServletRequest actual.</li>
+<li><strong>#{view}</strong>: el UIViewRoot actual.</li>
+<li><strong>#{component}</strong>: el UIComponent actual.</li>
+<li><strong>#{flash}</strong>: el Flash, que es un Map.</li>
+</ul></li>
+</ul>
+</section><section id="objectos-implícitos-ii" class="slide level2">
+<h2><span class="header-section-number">6.4</span> Objectos implícitos (II)</h2>
+<ul>
+<li>Son unos objetos que ya vienen predefinidos:
+<ul>
+<li><strong>#{applicationScope}</strong>: un map con los atributos del scope aplication actual.</li>
+<li><strong>#{sessionScope}</strong>: un map con los atributos de la session actual.</li>
+<li><strong>#{requestScope}</strong>: un map con los atributos de la request actual.</li>
+<li><strong>#{viewScope}</strong>: un map con los atributos de la view actual.</li>
+<li><strong>#{initParam}</strong>: un map con los parámetros del context actual.</li>
+<li><strong>#{param}</strong>: un map con los parámetros de la request actual.</li>
+<li><strong>#{paramValues}</strong>: un map con los valores de los parámetros de la request actual.</li>
+<li><strong>#{header}</strong>: un map con la cabecera de la request actual.</li>
+<li><strong>#{headerValues}</strong>: un map con los valores de la cabecera de la request actual.</li>
+<li><strong>#{cookie}</strong>: un map con los atributos de la cookie.</li>
+</ul></li>
+</ul>
+</section>
+<section id="navegación" class="titleslide slide level1"><h1><span class="header-section-number">7</span> Navegación</h1></section><section id="navegación-implícita" class="slide level2">
+<h2><span class="header-section-number">7.1</span> Navegación implícita</h2>
+<ul>
+<li><p><strong>Convención sobre configuración</strong> -&gt; no requiere faces-config.xml.</p></li>
+<li><p>Si queremos navegar desde question1.xhtml a question2.xhtml, en un link:</p></li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:commandLink</span><span class="ot"> value=</span><span class="st">&quot;Next&quot;</span><span class="ot"> action=</span><span class="st">&quot;question2&quot;</span><span class="kw">/&gt;</span></code></pre>
+<ul>
+<li>Si queremos elegir la página en tiempo de ejecución, asociamos el action a un método que nos devuelva el String que indicará la siguiente página a mostrar.</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:commandButton</span><span class="ot"> label=</span><span class="st">&quot;Aceptar&quot;</span><span class="ot"> action</span><span class="er">&quot;#{userBean.login}&quot;/&gt;</span></code></pre>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> String <span class="fu">login</span>() {
+  <span class="kw">return</span> <span class="st">&quot;login&quot;</span>;
+}</code></pre>
+</section><section id="navegación-condicional" class="slide level2">
+<h2><span class="header-section-number">7.2</span> Navegación condicional</h2>
+<ul>
+<li>Podemos decidir distintas páginas:</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:commandButton</span><span class="ot"> label=</span><span class="st">&quot;Aceptar&quot;</span><span class="ot"> action</span><span class="er">&quot;#{userBean.login}&quot;/&gt;</span></code></pre>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> String <span class="fu">login</span>() {
+  <span class="kw">if</span> (succes) {
+    <span class="kw">return</span> <span class="st">&quot;login&quot;</span>
+  } <span class="kw">else</span> {
+    <span class="kw">return</span> <span class="st">&quot;error&quot;</span>;
+  }
+}</code></pre>
+</section><section id="peticiones-http-get" class="slide level2">
+<h2><span class="header-section-number">7.3</span> Peticiones HTTP GET</h2>
+<ul>
+<li>Usar los componentes <strong>&lt;h:button&gt;</strong> y <strong>&lt;h:link&gt;</strong> en vez de &lt;h:commandButton&gt; y &lt;h:commandLink&gt;</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:link</span><span class="ot"> value=</span><span class="st">&quot;Aceptar&quot;</span><span class="ot"> outcome=</span><span class="st">&quot;login?myname=Ana&quot;</span><span class="kw">/&gt;</span></code></pre>
+<ul>
+<li>Si queremos recoger los parámetros y asociarlos a un Bean, añadiremos al principio:</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;f:metadata&gt;</span>
+  <span class="kw">&lt;f:viewParam</span><span class="ot"> name=</span><span class="st">&quot;myname&quot;</span><span class="ot"> value=</span><span class="st">&quot;#{userBean.name}&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;/f:metadata&gt;</span>
+...</code></pre>
+<ul>
+<li>Si queremos incluir todos los parámetros definidos en la página JSF:</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:button</span><span class="ot"> value=</span><span class="st">&quot;Aceptar&quot;</span><span class="ot"> outcome=</span><span class="st">&quot;login?includeViewParams=true&quot;</span><span class="kw">/&gt;</span></code></pre>
+</section><section id="forward-vs-redirect" class="slide level2">
+<h2><span class="header-section-number">7.4</span> Forward VS Redirect</h2>
+<ul>
+<li><p>Cuando desde una página pinchamos sobre un enlace o un botón para ir a otra página, <strong>por defecto, JSF hace un forward</strong>.</p></li>
+<li><p>La ventaja es que no perdemos la request, pero como desventaja no se actualiza la URL del navegador (eso es a veces confuso para los usuarios, y malo para los bookmarks y el SEO)</p></li>
+<li><p>Podemos <strong>obligar a que JSF haga un redirect</strong>, aunque esto implique perder la request original, y por ende forzar a que si queremos utilizar un Managed Bean este tiene tener un SessionScope.</p></li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:commandButton</span><span class="ot"> label=</span><span class="st">&quot;Aceptar&quot;</span><span class="ot"> action=</span><span class="st">&quot;login?faces-redirect=true&quot;</span><span class="kw">/&gt;</span></code></pre>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> String <span class="fu">login</span>() {
+  <span class="kw">return</span> <span class="st">&quot;login?faces-redirect=true&quot;</span>;
+}</code></pre>
+</section><section id="flash-scope" class="slide level2">
+<h2><span class="header-section-number">7.5</span> Flash Scope</h2>
+<ul>
+<li><p>Para poder tener el Managed Bean en un redirect, podemos utilizar el objeto <strong>flash</strong> que guarda datos entre la request actual y la siguiente request.</p></li>
+<li><p>Para guardarlo:</p></li>
+</ul>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> String <span class="fu">login</span>() {
+  Flash flash = FacesContext.<span class="fu">getCurrentInstance</span>().<span class="fu">getExternalContext</span>().<span class="fu">getFlash</span>();
+  flash.<span class="fu">put</span>(<span class="st">&quot;bean&quot;</span>, <span class="kw">this</span>);
+  <span class="kw">return</span> <span class="st">&quot;login?faces-redirect=true&quot;</span>;
+}</code></pre>
+<ul>
+<li>Para recuperarlo:</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml">#{flash.bean.propertyName}</code></pre>
+</section>
+<section id="tags-libraries" class="titleslide slide level1"><h1><span class="header-section-number">8</span> Tags Libraries</h1></section><section id="usos" class="slide level2">
+<h2><span class="header-section-number">8.1</span> Usos</h2>
+<ul>
+<li><p>Las páginas JSF se construyen con librerías de etiquetas y con el <strong>lenguaje de expresiones</strong> EL (ej: #{miBean.miPropiedad})</p></li>
+<li><p>Las librerías de etiquetas con <strong>sus atributos permiten personalizar</strong> <strong>el aspecto y el comportamiento</strong> de cada componente.</p></li>
+<li>Las librerías de etiquetas estándar son:
+<ul>
+<li>las <strong>core tags libraries</strong>: definen vistas, listeners, converters, validators, etc.</li>
+<li>las <strong>html tags libraries</strong>: definen componentes de entrada, de salida, de acción, de selección, de agrupación</li>
+</ul></li>
+</ul>
+</section><section id="core-vistas" class="slide level2">
+<h2><span class="header-section-number">8.2</span> Core: Vistas</h2>
+<ul>
+<li><strong>&lt;f:view/&gt;</strong>: Crea una vista principal.</li>
+<li><strong>&lt;f:subview/&gt;</strong>: Crea una vista secundaria.</li>
+<li><strong>&lt;f:facet/&gt;</strong>: Añade un facet a un componente.</li>
+</ul>
+</section><section id="core-listeners" class="slide level2">
+<h2><span class="header-section-number">8.3</span> Core: Listeners</h2>
+<ul>
+<li><strong>&lt;f:actionListener/&gt;</strong>: Añade un ActionListener a un componente.</li>
+<li><strong>&lt;f:valueChangeListener/&gt;</strong>: Añade un ValueChangeListener a un componente.</li>
+<li><strong>&lt;f:setPropertyChangeListener/&gt;</strong>: Añade un ActionListener a un componente que establece una propiedad de un bean a un valor dado.</li>
+</ul>
+</section><section id="core-converters" class="slide level2">
+<h2><span class="header-section-number">8.4</span> Core: Converters</h2>
+<ul>
+<li><strong>&lt;f:converter/&gt;</strong>: Añade un Converter a un componente.</li>
+<li><strong>&lt;f:convertDateTime/&gt;</strong>: Añade un DateTimeConverter a un componente.</li>
+<li><strong>&lt;f:convertNumber/&gt;</strong>: Añade un NumberConverter a un componente.</li>
+</ul>
+</section><section id="core-validators" class="slide level2">
+<h2><span class="header-section-number">8.5</span> Core: Validators</h2>
+<ul>
+<li><strong>&lt;f:validator/&gt;</strong>: Añade un Validator a un componente.</li>
+<li><strong>&lt;f:validateDoubleRange/&gt;</strong>: Valida que el valor de un componente esté dentro de un rango de valores de tipo double.</li>
+<li><strong>&lt;f:validateLength/&gt;</strong>: Valida la longitud del texto de un componente.</li>
+<li><strong>&lt;f:validateLongRange/&gt;</strong>: Valida que el valor de un componente esté dentro de un rango de valores de tipo long.</li>
+</ul>
+</section><section id="core-otros" class="slide level2">
+<h2><span class="header-section-number">8.6</span> Core: Otros</h2>
+<ul>
+<li><strong>&lt;f:attribute/&gt;</strong>: Añade un atributo (clave/valor) a un componente.</li>
+<li><strong>&lt;f:param/&gt;</strong>: Añade un parámetro a un componente.</li>
+<li><strong>&lt;f:loadBundle/&gt;</strong>: Carga un ResourceBundle y guarda las propiedades como un Map.</li>
+<li><strong>&lt;f:selectitems/&gt;</strong>: Specifica los items selcionados de un select.</li>
+<li><strong>&lt;f:selectitem/&gt;</strong>: Specifica el item selcionado de un select.</li>
+<li><strong>&lt;f:verbatim/&gt;</strong>: Añade etiquetas HTML dentro de una página JSF.</li>
+</ul>
+</section><section id="html-componentes-de-entrada" class="slide level2">
+<h2><span class="header-section-number">8.7</span> HTML: Componentes de entrada</h2>
+<ul>
+<li><strong>&lt;h:inputText/&gt;</strong>: Simple linea de texto de entrada.</li>
+<li><strong>&lt;h:inputTextarea/&gt;</strong>: Múltiples lineas de texto de entrada.</li>
+<li><strong>&lt;h:inputSecret/&gt;</strong>: Contraseña de entrada.</li>
+<li><strong>&lt;h:inputHidden/&gt;</strong>: Campo oculto.</li>
+</ul>
+</section><section id="html-componentes-de-salida" class="slide level2">
+<h2><span class="header-section-number">8.8</span> HTML: Componentes de salida</h2>
+<ul>
+<li><strong>&lt;h:outputLabel/&gt;</strong>: Etiqueta para otro componente.</li>
+<li><strong>&lt;h:outputLink/&gt;</strong>: Enlace HTML.</li>
+<li><strong>&lt;h:outputFormat/&gt;</strong>: Formatea un texto de salida.</li>
+<li><strong>&lt;h:outputText/&gt;</strong>: Simple linea de texto de salida.</li>
+<li><strong>&lt;h:outputStylesheet/&gt;</strong>: Import de un CSS.</li>
+<li><strong>&lt;h:outputScript/&gt;</strong>: Import de un JavaSript.</li>
+<li><strong>&lt;h:graphicImage/&gt;</strong>: Muestra una imagen.</li>
+<li><strong>&lt;h:message/&gt;</strong>: Muestra el mensaje más reciente para un componente.</li>
+<li><strong>&lt;h:messages/&gt;</strong>: Muestra todos los mensajes.</li>
+</ul>
+</section><section id="html-componentes-de-acción" class="slide level2">
+<h2><span class="header-section-number">8.9</span> HTML: Componentes de acción</h2>
+<ul>
+<li><strong>&lt;h:commandButton/&gt;</strong>: Botón: submit, reset o pushbutton.</li>
+<li><strong>&lt;h:commandLink/&gt;</strong>: Enlace asociado a un botón pushbutton.</li>
+</ul>
+</section><section id="html-componentes-de-selección" class="slide level2">
+<h2><span class="header-section-number">8.10</span> HTML: Componentes de selección</h2>
+<ul>
+<li><strong>&lt;h:selecOneListbox/&gt;</strong>: Selección simple para lista desplegable.</li>
+<li><strong>&lt;h:selectOneMenu/&gt;</strong>: Selección simple para menu.</li>
+<li><strong>&lt;h:selectOneRadio/&gt;</strong>: Conjunto de botones radio.</li>
+<li><strong>&lt;h:selectBooleanCheckbox/&gt;</strong>: Checkbox.</li>
+<li><strong>&lt;h:selectManyCheckbox/&gt;</strong>: Conjunto de checkboxes.</li>
+<li><strong>&lt;h:selectManyListbox/&gt;</strong>: Selección múltiple de lista desplegable.</li>
+<li><strong>&lt;h:selectManyMenu/&gt;</strong>: Selección múltiple de menu.</li>
+</ul>
+</section><section id="html-componentes-de-agrupación" class="slide level2">
+<h2><span class="header-section-number">8.11</span> HTML: Componentes de agrupación</h2>
+<ul>
+<li><strong>&lt;h:head/&gt;</strong>: Cabecera HTML.</li>
+<li><strong>&lt;h:body/&gt;</strong>: Cuerpo HTML.</li>
+<li><strong>&lt;h:form/&gt;</strong>: Formulario HTML.</li>
+<li><strong>&lt;h:panelGrid/&gt;</strong>: Tabla HTML.</li>
+<li><strong>&lt;h:panelGroup/&gt;</strong>: Dos o más componentes que son mostrados como uno.</li>
+<li><strong>&lt;h:dataTable/&gt;</strong>: Tabla de datos.</li>
+<li><strong>&lt;h:column/&gt;</strong>: Columna de un dataTable.</li>
+</ul>
+</section>
+<section id="ciclo-de-vida" class="titleslide slide level1"><h1><span class="header-section-number">9</span> Ciclo de vida</h1></section><section id="una-petición" class="slide level2">
+<h2><span class="header-section-number">9.1</span> Una petición</h2>
+<ul>
+<li><p>El ciclo de vida de JSF comienza cuando un usuario hace una <strong>petición HTTP</strong> y termina cuando el servidor le responde con la página correspondiente.</p></li>
+<li><p>Como HTTP es un protocolo sin estado, no es capaz de &quot;recordar&quot; las transacciones anteriores que se han llevado a cabo entre el usuario y el servidor.</p></li>
+<li><p>JSF soluciona esta &quot;falta de memoria&quot; manteniendo <strong>vistas en el lado del servidor</strong>.</p></li>
+<li><p>Una vista es un árbol de componentes que representa la UI del usuario.</p></li>
+</ul>
+</section><section id="esquema" class="slide level2">
+<h2><span class="header-section-number">9.2</span> Esquema</h2>
+<figure>
+<img src="../img/jsf-life-cycle.png" alt="Ciclo de vida" /><figcaption>Ciclo de vida</figcaption>
+</figure>
+</section><section id="restore-view" class="slide level2">
+<h2><span class="header-section-number">9.3</span> Restore View</h2>
+<ul>
+<li><p>Se crea o restaura el <strong>árbol de componentes</strong> (la vista) en memoria.</p></li>
+<li><p>Cuando la vista se crea por primera vez, se almacena en un contenedor padre conocido como FacesContext, y se pasa directamente a la última fase (Render Response), ya que la petición no tendrá valores que estudiar.</p></li>
+<li><p>Todas las operaciones realizadas en el FacesContext utilizan un hilo por petición de usuario, así que no hay que preocuparse porque múltiples peticiones de usuarios puedan &quot;liarla&quot;.</p></li>
+</ul>
+</section><section id="apply-request-values" class="slide level2">
+<h2><span class="header-section-number">9.4</span> Apply Request Values</h2>
+<ul>
+<li><p>Se itera sobre los componentes del árbol, comprobando qué valor de la petición pertenece a qué componente, y los van guardando.</p></li>
+<li><p>Aquí es donde se hace la <strong>conversión de datos de texto a objetos</strong>.</p></li>
+<li><p>Estos valores almacenados se llaman &quot;valores locales&quot;.</p></li>
+</ul>
+</section><section id="process-validations" class="slide level2">
+<h2><span class="header-section-number">9.5</span> Process Validations</h2>
+<ul>
+<li><p>Se realizan las <strong>validaciones</strong> necesarias de los &quot;valores locales&quot;.</p></li>
+<li><p>Si ocurre algún error en esta fase, se pasa a la fase Render Response, mostrándole al usuario otra vez la página actual con los errores ocurridos, dándole así una nueva oportunidad para que pueda introducir los datos correctos.</p></li>
+<li><p>Si añadimos a un botón o a un link el atributo immediate=true, se saltará la fase de validación.</p></li>
+</ul>
+</section><section id="update-model-values" class="slide level2">
+<h2><span class="header-section-number">9.6</span> Update Model Values</h2>
+<ul>
+<li><p>Se modifican los <strong>valores de los Managed Beans asociados</strong> a los componentes de la vista con los &quot;valores locales&quot; (Ej. #{userBean.name})</p></li>
+<li><p>En esta fase es donde se hace la conversión de valores.</p></li>
+</ul>
+</section><section id="invoke-application" class="slide level2">
+<h2><span class="header-section-number">9.7</span> Invoke Application</h2>
+<ul>
+<li><p>Se invoca el <strong>método asociado al action del botón o del link</strong> que pinchó el usuario (Ej. #{userBean.addUser}), y que hizo que se activara el ciclo de vida de la petición.</p></li>
+<li><p>Estos métodos devuelven un String que le indica al gestor de navegación qué página tiene que devolverle al usuario.</p></li>
+</ul>
+</section><section id="render-response" class="slide level2">
+<h2><span class="header-section-number">9.8</span> Render Response</h2>
+<ul>
+<li><p>El servidor devuelve la página de <strong>respuesta al navegador</strong> del usuario y guarda el estado actual de la vista para poder restaurarla en una petición posterior.</p></li>
+<li><p>Aquí es donde se hace la <strong>conversión de datos de objetos a textos</strong>.</p></li>
+</ul>
+</section>
+<section id="convertidores" class="titleslide slide level1"><h1><span class="header-section-number">10</span> Convertidores</h1></section><section id="descripción" class="slide level2">
+<h2><span class="header-section-number">10.1</span> Descripción</h2>
+<ul>
+<li><p><strong>Convierte texto en un objeto y viceversa</strong>.</p></li>
+<li><p>Si hay un problema de formato lanza un excepción.</p></li>
+<li><p>Existen convertidores estándar pero también se pueden personalizar.</p></li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:outputText</span><span class="ot"> value=</span><span class="st">&quot;#{myBean.date}&quot;</span><span class="ot"> converter=</span><span class="st">&quot;myConverter&quot;</span><span class="kw">&gt;</span></code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:outputText</span><span class="ot"> value=</span><span class="st">&quot;#{myBean.date}&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;f:converter</span><span class="ot"> converterId=</span><span class="st">&quot;myConverter&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;/h:outputText&gt;</span></code></pre>
+</section><section id="convertidores-estándar" class="slide level2">
+<h2><span class="header-section-number">10.2</span> Convertidores estándar</h2>
+<ul>
+<li><p>Si no se especifica un convertidor, JSF escoge uno por defecto.</p></li>
+<li><p>Exsisten para todos los <strong>tipos básicos</strong>: Long, Byte, Integer, Short, Character, Double, Float, BigDecimal, BigInteger y Boolean.</p></li>
+<li><p>Existen además convertidores predefinidos para fechas y números.</p></li>
+</ul>
+</section><section id="convertidor-datetime" class="slide level2">
+<h2><span class="header-section-number">10.3</span> Convertidor DateTime</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:outputText</span><span class="ot"> value=</span><span class="st">&quot;#{myBean.date}&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;f:convertDateTime</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> dateStyle=</span><span class="st">&quot;medium&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;/h:outputText&gt;</span></code></pre>
+<ul>
+<li>Atributos:
+<ul>
+<li><strong>dateStyle</strong>: formato short, medium (por defecto), long y full, para la fecha.</li>
+<li><strong>timeStyle</strong>: formato short, medium (por defecto), long y full, para las horas, minutos y segudos.</li>
+<li><strong>timezone</strong>: zona horaria para la fecha.</li>
+<li><strong>locale</strong>: el idioma local a utilizar para la visualización de esta fecha.</li>
+<li><strong>pattern</strong>: permite utilizar un formato personalizado.</li>
+<li><strong>type</strong>: especifica si se debe mostrar la fecha (date), la hora (time) o ambas (both).</li>
+</ul></li>
+</ul>
+</section><section id="convertidor-de-número" class="slide level2">
+<h2><span class="header-section-number">10.4</span> Convertidor de Número</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:outputText</span><span class="ot"> value=</span><span class="st">&quot;#{myBean.number}&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;f:convertNumber</span><span class="ot"> type=</span><span class="st">&quot;number&quot;</span><span class="ot"> minFractionDigits=</span><span class="st">&quot;2&quot;</span><span class="ot"> maxFractionDigits=</span><span class="st">&quot;2&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;/h:outputText&gt;</span></code></pre>
+<ul>
+<li>Atributos:
+<ul>
+<li><strong>groupingUsed</strong>: si true (por defecto) mostrará separador de miles.</li>
+<li><strong>integerOnly</strong>: si true solo se procesa la parte entera ignorando decimales. Por defecto es false.</li>
+<li><strong>locale</strong>: el idioma local a utilizar para la visualización de este número.</li>
+<li><strong>minFractionDigits</strong>: cantidad mínima de decimales a mostrar.</li>
+<li><strong>maxFractionDigits</strong>: máximo número de decimales a mostrar.</li>
+<li><strong>minIntegerDigits</strong>: cantidad mínima de dígitos enteros a mostrar.</li>
+<li><strong>maxIntegerDigits</strong>: máximo número de dígitos enteros a mostrar.</li>
+<li><strong>pattern</strong>: permite utilizar un formato personalizado.</li>
+<li><strong>tipo</strong>: indica si es un número (number, por defecto), una moneda (currency), o un tanto por ciento (percent).</li>
+</ul></li>
+</ul>
+</section><section id="convertidor-de-moneda" class="slide level2">
+<h2><span class="header-section-number">10.5</span> Convertidor de Moneda</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:outputText</span><span class="ot"> value=</span><span class="st">&quot;#{myBean.currency}&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;f:convertNumber</span><span class="ot"> type=</span><span class="st">&quot;currency&quot;</span><span class="ot"> currencyCode=</span><span class="st">&quot;USD&quot;</span><span class="ot"> currencySymbol=</span><span class="st">&quot;$&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;/h:outputText&gt;</span></code></pre>
+<ul>
+<li>Atributos (además de los ya mencionados para números):
+<ul>
+<li><strong>currencyCode</strong>: código internacional de la moneda.</li>
+<li><strong>currencySymbol</strong>: símbolo de la moneda..</li>
+</ul></li>
+</ul>
+</section><section id="convertidores-personalizados" class="slide level2">
+<h2><span class="header-section-number">10.6</span> Convertidores personalizados</h2>
+<ul>
+<li><p>A veces, los convertidores estándar no son suficientes.</p></li>
+<li><p>Implementar la interfaz <strong>javax.faces.Converter</strong>.</p></li>
+<li><p>Durante el Apply Request Values, JSF utiliza <strong>getAsObject()</strong> para convertir la cadena de entrada al modelo de objetos de datos.</p></li>
+<li><p>Durante Render Response, JSF utiliza <strong>getAsString()</strong> para hacer la conversión en la dirección opuesta.</p></li>
+</ul>
+</section><section id="registrar-el-convertidor" class="slide level2">
+<h2><span class="header-section-number">10.7</span> Registrar el convertidor</h2>
+<ul>
+<li>Una vez finalizado el conversor, tiene que <strong>registrarse en faces-config.xml</strong> <strong>o usando la notación <span class="citation" data-cites="FacesConverter">@FacesConverter</span></strong>.</li>
+</ul>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@FacesConverter</span>(value=<span class="st">&quot;PhoneNumberConverter&quot;</span>)
+<span class="kw">public</span> <span class="kw">class</span> PhoneNumberConverter <span class="kw">implements</span> Converter {
+  ...
+}</code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;converter&gt;</span>
+  <span class="kw">&lt;converter-id&gt;</span>PhoneNumberConverter<span class="kw">&lt;/converter-id&gt;</span>
+  <span class="kw">&lt;converter-class&gt;</span>package.PhoneNumberConverter<span class="kw">&lt;/converter-class&gt;</span>
+<span class="kw">&lt;/converter&gt;</span></code></pre>
+</section><section id="ejemplo" class="slide level2">
+<h2><span class="header-section-number">10.8</span> Ejemplo</h2>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@FacesConverter</span>(value=<span class="st">&quot;PhoneNumberConverter&quot;</span>)
+<span class="kw">public</span> <span class="kw">class</span> PhoneNumberConverter <span class="kw">implements</span> Converter {
+
+  <span class="kw">public</span> Object <span class="fu">getAsObject</span>(
+    FacesContext context, UIComponent component, String value) {
+
+    Integer result = <span class="kw">null</span>;
+    <span class="co">// parseamos value</span>
+    ...
+    <span class="kw">return</span> result;
+  }
+
+  <span class="kw">public</span> String <span class="fu">getAsString</span>(
+    FacesContext context, UIComponent component, String value)
+      <span class="kw">throws</span> ConverterException {
+
+    String result = <span class="kw">null</span>;
+    <span class="co">// parseamos value</span>
+    ...
+    <span class="kw">return</span> result;
+  }
+}</code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:inputText</span><span class="ot"> value=</span><span class="st">&quot;#{usuario.phoneNumber}&quot;</span><span class="ot"> converter=</span><span class="st">&quot;PhoneNumberConverter&quot;</span> <span class="kw">/&gt;</span></code></pre>
+</section><section id="convertidores-automáticos" class="slide level2">
+<h2><span class="header-section-number">10.9</span> Convertidores automáticos</h2>
+<ul>
+<li><p>Podemos hacer que JSF automáticamente convierta tipos de datos con su convertidor correspondiente, de tal forma que no tengamos que utilizarlo en los taglibs.</p></li>
+<li><p>Para ello:</p></li>
+</ul>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@FacesConverter</span>(forClass=<span class="st">&quot;PhoneNumber.class&quot;</span>)
+<span class="kw">public</span> <span class="kw">class</span> PhoneNumberConverter <span class="kw">implements</span> Converter {
+  ...
+}</code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;converter&gt;</span>
+  <span class="kw">&lt;converter-id&gt;</span>PhoneNumberConverter<span class="kw">&lt;/converter-id&gt;</span>
+  <span class="kw">&lt;converter-class&gt;</span>package.PhoneNumberConverter<span class="kw">&lt;/converter-class&gt;</span>
+  <span class="kw">&lt;converter-for-class&gt;</span>package.PhoneNumber<span class="kw">&lt;/converter-forclass&gt;</span>
+<span class="kw">&lt;/converter&gt;</span></code></pre>
+</section>
+<section id="validadores" class="titleslide slide level1"><h1><span class="header-section-number">11</span> Validadores</h1></section><section id="definición-1" class="slide level2">
+<h2><span class="header-section-number">11.1</span> Definición</h2>
+<ul>
+<li><p>Sirven para <strong>validar los datos</strong> introducidos por el usario.</p></li>
+<li><p>JSF viene con validadores estándar.</p></li>
+<li><p>Podemos crearnos validadores personalizados.</p></li>
+<li><p>Tabién podemos validar a nivel de aplicación.</p></li>
+</ul>
+</section><section id="validadores-estándar" class="slide level2">
+<h2><span class="header-section-number">11.2</span> Validadores estándar</h2>
+<ul>
+<li><strong>&lt;f:validateDoubleRange&gt;</strong>: valida que un double esté dentro de un rango determinado.</li>
+<li><strong>&lt;f:validateLength&gt;</strong>: valida que la longitud de la cadena esté dentro de un rango determinado.</li>
+<li><strong>&lt;f:validateLongRange&gt;</strong>: valida que un long esté dentro de un rango determinado.</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:inputText</span><span class="ot"> id=</span><span class="st">&quot;quantity&quot;</span><span class="ot"> value=</span><span class="st">&quot;#{item.quantity}&quot;</span><span class="ot"> size=</span><span class="st">&quot;2&quot;</span><span class="ot"> required=</span><span class="st">&quot;true&quot;</span>
+<span class="ot">    requiredMessage=</span><span class="st">&quot;Cuantos? Ninguno?&quot;</span>
+<span class="ot">    converterMessage=</span><span class="st">&quot;Un entero por favor!&quot;</span>
+    validatorMessage=&quot;Mín<span class="er">imo</span><span class="ot"> uno</span><span class="er">!&quot;&gt;</span>
+  <span class="er">&lt;f:validateLongRange</span> <span class="er">minimum</span><span class="ot">=</span><span class="st">&quot;1&quot;</span><span class="kw">/&gt;</span>
+<span class="er">&lt;</span>/h:inputText&gt;</code></pre>
+</section><section id="validadores-personalizados" class="slide level2">
+<h2><span class="header-section-number">11.3</span> Validadores personalizados</h2>
+<ul>
+<li><p>Implementar la interfaz <strong>javax.faces.validator.Validator</strong>.</p></li>
+<li><p>Durante el Process Validations, JSF utiliza <strong>validate()</strong> para validar los datos introducidos.</p></li>
+<li><p>Una vez finalizado el conversor, tiene que <strong>registrarse en faces-config.xml</strong> <strong>o usando la notación <span class="citation" data-cites="FacesValidator">@FacesValidator</span></strong>.</p></li>
+</ul>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@FacesValidator</span>(<span class="st">&quot;NifValidator&quot;</span>)
+<span class="kw">public</span> <span class="kw">class</span> NifValidator <span class="kw">implements</span> Validator {
+  ...
+&lt;!--}--&gt;</code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;validator&gt;</span>
+  <span class="kw">&lt;validator-id&gt;</span>NifValidator<span class="kw">&lt;/validator-id&gt;</span>
+  <span class="kw">&lt;validator-class&gt;</span>package.NifValidator<span class="kw">&lt;/validator-class&gt;</span>
+<span class="kw">&lt;/validator&gt;</span></code></pre>
+</section><section id="ejemplo-1" class="slide level2">
+<h2><span class="header-section-number">11.4</span> Ejemplo</h2>
+<ul>
+<li>Validador que valida la letra del nif:</li>
+</ul>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@FacesValidator</span>(<span class="st">&quot;NifValidator&quot;</span>)
+<span class="kw">public</span> <span class="kw">class</span> NifValidator <span class="kw">implements</span> Validator {
+
+  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">validate</span>(
+    FacesContext context, UIComponent component, Object value) {
+
+    String errorMessage = <span class="kw">null</span>;
+    <span class="co">// validate value and put errorMessage</span>
+    ...
+    <span class="kw">if</span> (message != <span class="kw">null</span>) {
+
+      FacesMessage message = <span class="kw">new</span> <span class="fu">FacesMessage</span>(
+       FacesMessage.<span class="fu">SEVERITY_ERROR</span>, errorMessage, errorMessage);
+      <span class="kw">throw</span> <span class="kw">new</span> <span class="fu">ValidatorException</span>(message);
+    }
+  }
+}</code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:inputText</span><span class="ot"> id=</span><span class="st">&quot;nif&quot;</span><span class="ot"> value=</span><span class="st">&quot;#{usuario.nif}&quot;</span>
+<span class="ot">    rendered=</span><span class="st">&quot;true&quot;</span>
+<span class="ot">    requiredMessage=</span><span class="st">&quot;No puede estar vacio&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;f:validator</span><span class="ot"> validatorId=</span><span class="st">&quot;NifValidator&quot;</span> <span class="kw">/&gt;</span>
+<span class="kw">&lt;/h:inputText&gt;</span>
+<span class="kw">&lt;h:message</span><span class="ot"> for=</span><span class="st">&quot;nif&quot;</span><span class="ot"> errorClass=</span><span class="st">&quot;error&quot;</span> <span class="kw">/&gt;</span></code></pre>
+</section><section id="validador-en-managed-bean" class="slide level2">
+<h2><span class="header-section-number">11.5</span> Validador en Managed Bean</h2>
+<ul>
+<li>En lugar de crear una nueva clase como se describe en la sección anterior, podemos agregar un <strong>método a un Managed Bean</strong>.</li>
+</ul>
+<pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> Usuario {
+  ...
+  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">validateNif</span>(
+    FacesContext context, UIComponent component, Object value) {
+
+    String errorMessage = <span class="kw">null</span>;
+    <span class="co">// validate value and put errorMessage</span>
+    ...
+    <span class="kw">if</span> (errorMessage != <span class="kw">null</span>) {
+      ((UIInput)component).<span class="fu">setValid</span>(<span class="kw">false</span>);
+      FacesMessage message = <span class="kw">new</span> <span class="fu">FacesMessage</span>(errorMessage);
+      context.<span class="fu">addMessage</span>(component.<span class="fu">getClientId</span>(context), message);
+    }
+  }
+}</code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:inputText</span><span class="ot"> id=</span><span class="st">&quot;nif&quot;</span><span class="ot"> value=</span><span class="st">&quot;#{Usuario.nif}&quot;</span>
+<span class="ot">    rendered=</span><span class="st">&quot;true&quot;</span>
+<span class="ot">    requiredMessage=</span><span class="st">&quot;No puede estar vacio&quot;</span>
+<span class="ot">    validator=</span><span class="st">&quot;#{usuario.validateNif}&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;/h:inputText&gt;</span>
+<span class="kw">&lt;h:message</span><span class="ot"> for=</span><span class="st">&quot;ccexpiry&quot;</span><span class="ot"> errorClass=</span><span class="st">&quot;error&quot;</span> <span class="kw">/&gt;</span></code></pre>
+</section><section id="validación-a-nivel-de-aplicación" class="slide level2">
+<h2><span class="header-section-number">11.6</span> Validación a nivel de aplicación</h2>
+<ul>
+<li><p>Cuando queremos por ejemplo que un determinado registro exsista en la BD.</p></li>
+<li><p>Se hace en la llamada al método del Managed Bean, y si hay un error se muestra:</p></li>
+</ul>
+<pre class="sourceCode java"><code class="sourceCode java">FacesContext context = FacesContext.<span class="fu">getCurrentInstance</span>();
+FacesMessage message = <span class="kw">new</span> <span class="fu">FacesMessage</span>();
+message.<span class="fu">setSeverity</span>(FacesMessage.<span class="fu">SEVERITY_ERROR</span>);
+message.<span class="fu">setSummary</span>(<span class="st">&quot;Este es el mensaje de error principal&quot;</span>);
+message.<span class="fu">setDetail</span>(<span class="st">&quot;Este es el detalle&quot;</span>);
+context.<span class="fu">addMessage</span>(<span class="kw">null</span>, message);</code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:messages</span><span class="ot"> globalOnly=</span><span class="st">&quot;true&quot;</span><span class="ot"> styleClass=</span><span class="st">&quot;error&quot;</span><span class="kw">/&gt;</span></code></pre>
+</section>
+<section id="message-bundles" class="titleslide slide level1"><h1><span class="header-section-number">12</span> Message Bundles</h1></section><section id="definición-2" class="slide level2">
+<h2><span class="header-section-number">12.1</span> Definición</h2>
+<ul>
+<li><p>Los Message Bundles son ficheros <strong>.properties</strong> que guardan <strong>mensajes del tipo clave=valor</strong>.</p></li>
+<li><p>Nos ayuda con la <strong>internacionalización</strong> de la aplicación.</p></li>
+</ul>
+</section><section id="creación" class="slide level2">
+<h2><span class="header-section-number">12.2</span> Creación</h2>
+<ul>
+<li><strong>messages.properties</strong> en <strong>src/java/com/examples</strong></li>
+</ul>
+<pre><code>name=Tu nombre:
+age=Tu edad:</code></pre>
+</section><section id="instanciación" class="slide level2">
+<h2><span class="header-section-number">12.3</span> Instanciación</h2>
+<ul>
+<li>Lo podemos instanciar en cada página JSF donde lo necesitemos.</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;f:loadBundle</span><span class="ot"> basename=</span><span class="st">&quot;com.examples.messages&quot;</span><span class="ot"> var=</span><span class="st">&quot;msg&quot;</span><span class="kw">/&gt;</span></code></pre>
+<ul>
+<li>O de manera global en faces-config.xml</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;application&gt;</span>
+  <span class="kw">&lt;resource-bundle&gt;</span>
+    <span class="kw">&lt;base-name&gt;</span>com.examples.messages<span class="kw">&lt;/base-name&gt;</span>
+    <span class="kw">&lt;var&gt;</span>msg<span class="kw">&lt;/var&gt;</span>
+  <span class="kw">&lt;/resource-bundle&gt;</span>
+<span class="kw">&lt;/application&gt;</span></code></pre>
+<ul>
+<li>Para acceder:</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml">#{msg.propertyName}</code></pre>
+</section><section id="paremetrización" class="slide level2">
+<h2><span class="header-section-number">12.4</span> Paremetrización</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml">hello=Bienvenido {0} a nuestra web</code></pre>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;h:outputFormat</span><span class="ot"> value=</span><span class="st">&quot;#{msg.hello}&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;f:param</span><span class="ot"> value=</span><span class="st">&quot;#{userBean.name}&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;/h:outputFormat&gt;</span></code></pre>
+</section><section id="internacionalización" class="slide level2">
+<h2><span class="header-section-number">12.5</span> Internacionalización</h2>
+<ul>
+<li>Crear un nuevo <strong>.properties</strong> anadiendo un guión bajo y el código ISO-639 del idioma:</li>
+</ul>
+<pre><code>messages_en.properties</code></pre>
+<ul>
+<li><p>Java se encarga de hacer referencia al fichero adecuado según el idioma.</p></li>
+<li><p>Si no se carga ninguno, coge el de por defecto, que en nuestro ejemplo sería messages.properties.</p></li>
+</ul>
+</section><section id="definir-el-idioma-i" class="slide level2">
+<h2><span class="header-section-number">12.6</span> Definir el idioma (I)</h2>
+<ul>
+<li>De manera global en el fichero faces-config.xml:</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;application&gt;</span>
+  <span class="kw">&lt;locale-config&gt;</span>
+    <span class="kw">&lt;default-locale&gt;</span>es<span class="kw">&lt;/default-locale&gt;</span>
+    <span class="kw">&lt;supported-locale&gt;</span>en<span class="kw">&lt;/supported-locale&gt;</span>
+  <span class="kw">&lt;/locale-config&gt;</span>
+<span class="kw">&lt;/application&gt;</span></code></pre>
+</section><section id="definir-el-idioma-ii" class="slide level2">
+<h2><span class="header-section-number">12.7</span> Definir el idioma (II)</h2>
+<ul>
+<li>De manera local y estática en una página JSF:</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;f:view</span><span class="ot"> locale=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></code></pre>
+</section><section id="definir-el-idioma-iii" class="slide level2">
+<h2><span class="header-section-number">12.8</span> Definir el idioma (III)</h2>
+<ul>
+<li>De manera local y dinámica (por ejemplo, para cuando dejemos que el usuario seleccione el idioma)</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;f:view</span><span class="ot"> locale=</span><span class="st">&quot;#{userBean.locale}&quot;</span><span class="kw">/&gt;</span></code></pre>
+<ul>
+<li>De manera local en una clase Java</li>
+</ul>
+<pre class="sourceCode java"><code class="sourceCode java">FacesContext.<span class="fu">getCurrentInstance</span>().<span class="fu">getViewRoot</span>().<span class="fu">setLocale</span>(<span class="kw">new</span> Locale(<span class="st">&quot;es&quot;</span>));</code></pre>
+</section>
+<section id="facelets" class="titleslide slide level1"><h1><span class="header-section-number">13</span> Facelets</h1></section><section id="esquema-1" class="slide level2">
+<h2><span class="header-section-number">13.1</span> Esquema</h2>
+<figure>
+<img src="../img/jsf-facelets.png" alt="Facelets" /><figcaption>Facelets</figcaption>
+</figure>
+</section><section id="opciones-web.xml" class="slide level2">
+<h2><span class="header-section-number">13.2</span> Opciones web.xml</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="co">&lt;!-- Indicar que el sufijo por defecto (no necesario con MyFaces) --&gt;</span>
+<span class="kw">&lt;context-param&gt;</span>
+  <span class="kw">&lt;param-name&gt;</span>javax.faces.DEFAULT_SUFFIX<span class="kw">&lt;/param-name&gt;</span>
+  <span class="kw">&lt;param-value&gt;</span>.xhtml<span class="kw">&lt;/param-value&gt;</span>
+<span class="kw">&lt;/context-param&gt;</span>
+
+<span class="co">&lt;!-- Indicar que estamos en desarrollo (más informativo en los logs) --&gt;</span>
+<span class="kw">&lt;context-param&gt;</span>
+  <span class="kw">&lt;param-name&gt;</span>facelets.DEVELOPMENT<span class="kw">&lt;/param-name&gt;</span>
+  <span class="kw">&lt;param-value&gt;</span>true<span class="kw">&lt;/param-value&gt;</span>
+<span class="kw">&lt;/context-param&gt;</span>
+
+<span class="co">&lt;!-- No renderizar los comentarios --&gt;</span>
+<span class="kw">&lt;context-param&gt;</span>
+  <span class="kw">&lt;param-name&gt;</span>javax.faces.FACELETS_SKIP_COMMENTS<span class="kw">&lt;/param-name&gt;</span>
+  <span class="kw">&lt;param-value&gt;</span>true<span class="kw">&lt;/param-value&gt;</span>
+<span class="kw">&lt;/context-param&gt;</span></code></pre>
+</section><section id="configuración-faces-config.xml" class="slide level2">
+<h2><span class="header-section-number">13.3</span> Configuración faces-config.xml</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="co">&lt;!-- Indicar que vamos a utilizar Facelets (no necesario con MyFaces) --&gt;</span>
+<span class="kw">&lt;application&gt;</span>
+  <span class="kw">&lt;view-handler&gt;</span>com.sun.facelets.FaceletViewHandler<span class="kw">&lt;/view-handler&gt;</span>
+<span class="kw">&lt;/application&gt;</span></code></pre>
+</section><section id="tags" class="slide level2">
+<h2><span class="header-section-number">13.4</span> Tags</h2>
+<ul>
+<li><strong>&lt;ui:insert&gt;</strong>: definición a remplazar en un componente mediante la etiqueta &lt;ui:define&gt;.</li>
+<li><strong>&lt;ui:param&gt;</strong>: para pasar parámetros desde las plantillas a los componentes.</li>
+<li><strong>&lt;ui:composition&gt;</strong>: envuelve un conjunto de componentes que utilizan una plantilla. Todo lo que no esté dentro no se rederizará.</li>
+<li><strong>&lt;ui:define&gt;</strong>: contenido que remplaza lo definido en un &lt;ui:insert&gt;.</li>
+<li><strong>&lt;ui:decorate&gt;</strong>: igual que la etiqueta &lt;ui:composition&gt; sólo que ahora se renderiza todo.</li>
+<li><strong>&lt;ui:include&gt;</strong>: sirve para incluir en una página el contenido de otra.</li>
+</ul>
+</section><section id="definición-de-la-plantilla" class="slide level2">
+<h2><span class="header-section-number">13.5</span> Definición de la Plantilla</h2>
+<ul>
+<li><p>Dentro del directorio <strong>WEB-INF/facelets/templates/</strong>, de modo que no sean visibles desde el contenedor web.</p></li>
+<li><p>defaultLayout.xhtml</p></li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+<span class="kw">&lt;html</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="ot"> xmlns:ui=</span><span class="st">&quot;http://java.sun.com/jsf/facelets&quot;</span>
+<span class="ot">  xmlns:f=</span><span class="st">&quot;http://java.sun.com/jsf/core&quot;</span><span class="ot"> xmlns:h=</span><span class="st">&quot;http://java.sun.com/jsf/html&quot;</span><span class="kw">&gt;</span>
+
+<span class="kw">&lt;h:head&gt;</span> ... <span class="kw">&lt;title&gt;&lt;ui:insert</span><span class="ot"> name=</span><span class="st">&quot;title&quot;</span><span class="kw">/&gt;</span> ... <span class="kw">&lt;/title&gt;</span> ... <span class="kw">&lt;/h:head&gt;</span>
+
+<span class="kw">&lt;h:body&gt;</span>
+  <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;header&quot;</span><span class="kw">&gt;</span> ... <span class="kw">&lt;/div&gt;</span>
+  <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;menu&quot;</span><span class="kw">&gt;&lt;ui:include</span><span class="ot"> src=</span><span class="st">&quot;menu.xhtml&quot;</span><span class="kw">/&gt;&lt;/div&gt;</span>
+  <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;content&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;ui:insert</span><span class="ot"> name=</span><span class="st">&quot;content&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;span&gt;</span>Texto por defecto<span class="kw">&lt;/span&gt;</span>
+    <span class="kw">&lt;/ui:insert&gt;</span>
+  <span class="kw">&lt;/div&gt;</span>
+  <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;footer&quot;</span><span class="kw">&gt;</span> ... <span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/h:body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+</section><section id="inclusión-del-menú" class="slide level2">
+<h2><span class="header-section-number">13.6</span> Inclusión del Menú</h2>
+<ul>
+<li>menu.xhtml</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+<span class="kw">&lt;html</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="ot"> xmlns:ui=</span><span class="st">&quot;http://java.sun.com/jsf/facelets&quot;</span>
+<span class="ot">  xmlns:f=</span><span class="st">&quot;http://java.sun.com/jsf/core&quot;</span><span class="ot"> xmlns:h=</span><span class="st">&quot;http://java.sun.com/jsf/html&quot;</span>
+<span class="ot">  xmlns:p=</span><span class="st">&quot;http://primefaces.prime.com.tr/ui&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;ui:composition&gt;</span>
+    <span class="kw">&lt;p:menubar&gt;</span>
+      <span class="kw">&lt;p:submenu</span><span class="ot"> label=</span><span class="st">&quot;#{msg.menu_home}&quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;p:menuitem</span><span class="ot"> label=</span><span class="st">&quot;Home&quot;</span><span class="ot"> url=</span><span class="st">&quot;#&quot;</span> <span class="kw">/&gt;</span>
+      <span class="kw">&lt;/p:submenu&gt;</span>
+      <span class="kw">&lt;p:submenu</span><span class="ot"> label=</span><span class="st">&quot;#{msg.menu_items}&quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;p:menuitem</span><span class="ot"> label=</span><span class="st">&quot;#{msg.new}&quot;</span><span class="ot"> url=</span><span class="st">&quot;#{menuBean.createItem}&quot;</span><span class="kw">&gt;&lt;/p:menuitem&gt;</span>
+        <span class="kw">&lt;p:menuitem</span><span class="ot"> label=</span><span class="st">&quot;#{msg.list}&quot;</span><span class="ot"> url=</span><span class="st">&quot;#{menuBean.listItem}&quot;</span><span class="kw">&gt;&lt;/p:menuitem&gt;</span>
+      <span class="kw">&lt;/p:submenu&gt;</span>
+    <span class="kw">&lt;/p:menubar&gt;</span>
+  <span class="kw">&lt;/ui:composition&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+</section><section id="uso-de-la-plantilla" class="slide level2">
+<h2><span class="header-section-number">13.7</span> Uso de la Plantilla</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+
+<span class="kw">&lt;html</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="ot"> xmlns:ui=</span><span class="st">&quot;http://java.sun.com/jsf/facelets&quot;</span>
+<span class="ot">    xmlns:f=</span><span class="st">&quot;http://java.sun.com/jsf/core&quot;</span><span class="ot"> xmlns:h=</span><span class="st">&quot;http://java.sun.com/jsf/html&quot;</span><span class="kw">&gt;</span>
+
+<span class="kw">&lt;ui:composition</span><span class="ot"> template=</span><span class="st">&quot;/WEB-INF/facelets/templates/defaultLayout.xhtml&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;ui:define</span><span class="ot"> name=</span><span class="st">&quot;title&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;h:outputText</span><span class="ot"> value=</span><span class="st">&quot;#{msg.edit_of} #{msg.menu_items}&quot;</span> <span class="kw">/&gt;</span>
+  <span class="kw">&lt;/ui:define&gt;</span>
+  <span class="kw">&lt;ui:define</span><span class="ot"> name=</span><span class="st">&quot;content&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;h:form&gt;</span>
+      <span class="co">&lt;!-- contenido de la página--&gt;</span>
+    <span class="kw">&lt;/h:form&gt;</span>
+  <span class="kw">&lt;/ui:define&gt;</span>
+<span class="kw">&lt;/ui:composition&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+</section>
+<section id="composite-components" class="titleslide slide level1"><h1><span class="header-section-number">14</span> Composite Components</h1></section><section id="introducción-1" class="slide level2">
+<h2><span class="header-section-number">14.1</span> Introducción</h2>
+<ul>
+<li>Con JSF 2.0 podemos crear <strong>componentes personalizados</strong>, a partir de componentes ya existentes, de una forma sencilla.</li>
+</ul>
+</section><section id="ejemplo-2" class="slide level2">
+<h2><span class="header-section-number">14.2</span> Ejemplo</h2>
+<ul>
+<li>webapp/resources/components/buttons.xhtml</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="dt">&lt;!DOCTYPE </span>html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; 
+&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;<span class="dt">&gt;</span>
+<span class="kw">&lt;html</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span>
+<span class="ot">      xmlns:h=</span><span class="st">&quot;http://java.sun.com/jsf/html&quot;</span>
+<span class="ot">      xmlns:f=</span><span class="st">&quot;http://java.sun.com/jsf/core&quot;</span>
+<span class="ot">      xmlns:composite=</span><span class="st">&quot;http://java.sun.com/jsf/composite&quot;</span><span class="kw">&gt;</span>
+
+  <span class="kw">&lt;composite:interface&gt;</span>
+    <span class="kw">&lt;composite:attribute</span><span class="ot"> name=</span><span class="st">&quot;actionLabel&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;composite:attribute</span><span class="ot"> name=</span><span class="st">&quot;actionMethod&quot;</span>
+<span class="ot">      method-signature=</span><span class="st">&quot;java.lang.String action()&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;composite:attribute</span><span class="ot"> name=</span><span class="st">&quot;resetLabel&quot;</span> <span class="kw">/&gt;</span>
+  <span class="kw">&lt;/composite:interface&gt;</span>
+
+  <span class="kw">&lt;composite:implementation&gt;</span>
+    <span class="kw">&lt;h:commandButton</span><span class="ot"> value=</span><span class="st">&quot;#{cc.attrs.actionLabel}&quot;</span>
+<span class="ot">      action=</span><span class="st">&quot;#{cc.attrs.actionMethod}&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;h:commandButton</span><span class="ot"> value=</span><span class="st">&quot;#{cc.attrs.resetLabel}&quot;</span>
+<span class="ot">      type=</span><span class="st">&quot;reset&quot;</span> <span class="kw">/&gt;</span>
+  <span class="kw">&lt;/composite:implementation&gt;</span>
+
+<span class="kw">&lt;/html&gt;</span></code></pre>
+</section><section id="uso-i" class="slide level2">
+<h2><span class="header-section-number">14.3</span> Uso (I)</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="dt">&lt;!DOCTYPE </span>html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;
+        &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;<span class="dt">&gt;</span>
+<span class="kw">&lt;html</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span>
+<span class="ot">      xmlns:h=</span><span class="st">&quot;http://java.sun.com/jsf/html&quot;</span>
+<span class="ot">      xmlns:f=</span><span class="st">&quot;http://java.sun.com/jsf/core&quot;</span>
+<span class="ot">      xmlns:my=</span><span class="st">&quot;http://java.sun.com/jsf/composite/components&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;h:body&gt;</span>
+  <span class="kw">&lt;h:form</span><span class="ot"> id=</span><span class="st">&quot;mainForm&quot;</span> <span class="kw">&gt;</span>
+    <span class="kw">&lt;h:panelGrid</span><span class="ot"> columns=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;my:buttons</span><span class="ot"> actionLabel=</span><span class="st">&quot;Press me&quot;</span> 
+<span class="ot">        actionMethod=</span><span class="st">&quot;#{helloWorld.send}&quot;</span>
+<span class="ot">        resetLabel=</span><span class="st">&quot;Reset&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;/h:panelGrid&gt;</span>
+  <span class="kw">&lt;/h:form&gt;</span>
+<span class="kw">&lt;/h:body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+</section><section id="uso-ii" class="slide level2">
+<h2><span class="header-section-number">14.4</span> Uso (II)</h2>
+<ul>
+<li>Si buttons.xml hubiera estado en webapp/resources/mycomponents/buttons.xml cambiar:</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml">xmlns:my=&quot;http://java.sun.com/jsf/composite/components&quot;</code></pre>
+<ul>
+<li>por:</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml">xmlns:my=&quot;http://java.sun.com/jsf/composite/mycomponents&quot;</code></pre>
+</section>
+<section id="custom-tags" class="titleslide slide level1"><h1><span class="header-section-number">15</span> Custom Tags</h1></section><section id="introducción-2" class="slide level2">
+<h2><span class="header-section-number">15.1</span> Introducción</h2>
+<ul>
+<li>Con JSF 2.0 también podemos crear <strong>librerías de etiquetas personanilazadas</strong>, a partir de componentes ya existentes, de una forma sencilla.</li>
+</ul>
+</section><section id="ejemplo-3" class="slide level2">
+<h2><span class="header-section-number">15.2</span> Ejemplo</h2>
+<ul>
+<li>webapp/WEB-INF/taglibs/buttons.xhtml</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="dt">&lt;!DOCTYPE </span>html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; 
+&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;<span class="dt">&gt;</span>
+<span class="kw">&lt;html</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span>
+<span class="ot">      xmlns:h=</span><span class="st">&quot;http://java.sun.com/jsf/html&quot;</span>
+<span class="ot">      xmlns:f=</span><span class="st">&quot;http://java.sun.com/jsf/core&quot;</span>
+<span class="ot">      xmlns:ui=</span><span class="st">&quot;http://java.sun.com/jsf/facelets&quot;</span><span class="kw">&gt;</span>
+
+  <span class="kw">&lt;h:body&gt;</span>
+    <span class="kw">&lt;ui:composition&gt;</span>
+      <span class="kw">&lt;h:commandButton</span><span class="ot"> value=</span><span class="st">&quot;#{actionLabel}&quot;</span><span class="ot"> action=</span><span class="st">&quot;#{actionBean[actionMethod]}&quot;</span> <span class="kw">/&gt;</span>
+      <span class="kw">&lt;h:commandButton</span><span class="ot"> value=</span><span class="st">&quot;#{resetLabel}&quot;</span><span class="ot"> type=</span><span class="st">&quot;reset&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;/ui:composition&gt;</span>
+  <span class="kw">&lt;/h:body&gt;</span>
+
+<span class="kw">&lt;/html&gt;</span></code></pre>
+</section><section id="configuración-i" class="slide level2">
+<h2><span class="header-section-number">15.3</span> Configuración (I)</h2>
+<ul>
+<li>webapp/WEB-INF/taglibs.xml</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot;<span class="kw">?&gt;</span>
+<span class="dt">&lt;!DOCTYPE </span>facelet-taglib PUBLIC
+  &quot;-//Sun Microsystems, Inc.//DTD Facelet Taglib 1.0//EN&quot;
+  &quot;http://java.sun.com/dtd/facelet-taglib_1_0.dtd&quot;<span class="dt">&gt;</span>
+
+<span class="kw">&lt;facelet-taglib&gt;</span>
+  <span class="kw">&lt;namespace&gt;</span>http://asanzdiego.com/taglibs<span class="kw">&lt;/namespace&gt;</span>
+  <span class="kw">&lt;tag&gt;</span>
+    <span class="kw">&lt;tag-name&gt;</span>buttons<span class="kw">&lt;/tag-name&gt;</span>
+    <span class="kw">&lt;source&gt;</span>taglibs/buttons.xhtml<span class="kw">&lt;/source&gt;</span>
+  <span class="kw">&lt;/tag&gt;</span>
+<span class="kw">&lt;/facelet-taglib&gt;</span></code></pre>
+</section><section id="configuración-ii" class="slide level2">
+<h2><span class="header-section-number">15.4</span> Configuración (II)</h2>
+<ul>
+<li>webapp/WEB-INF/web.xml</li>
+</ul>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot;<span class="kw">?&gt;</span>
+<span class="kw">&lt;web-app</span><span class="ot"> xmlns=</span><span class="st">&quot;http://java.sun.com/xml/ns/javaee&quot;</span>
+<span class="ot">         xmlns:xsi=</span><span class="st">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<span class="ot">         xsi:schemaLocation=</span><span class="st">&quot;http://java.sun.com/xml/ns/javaee</span>
+<span class="st">              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;</span><span class="ot"> version=</span><span class="st">&quot;2.5&quot;</span><span class="kw">&gt;</span>
+  ...
+
+  <span class="co">&lt;!-- Load custom tag into JSF web application --&gt;</span>
+  <span class="kw">&lt;context-param&gt;</span>
+    <span class="kw">&lt;param-name&gt;</span>facelets.LIBRARIES<span class="kw">&lt;/param-name&gt;</span>
+    <span class="kw">&lt;param-value&gt;</span>/WEB-INF/taglibs.xml<span class="kw">&lt;/param-value&gt;</span>
+  <span class="kw">&lt;/context-param&gt;</span>
+
+<span class="kw">&lt;/web-app&gt;</span></code></pre>
+</section><section id="uso" class="slide level2">
+<h2><span class="header-section-number">15.5</span> Uso</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="dt">&lt;!DOCTYPE </span>html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;
+        &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;<span class="dt">&gt;</span>
+<span class="kw">&lt;html</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span>
+<span class="ot">      xmlns:h=</span><span class="st">&quot;http://java.sun.com/jsf/html&quot;</span>
+<span class="ot">      xmlns:f=</span><span class="st">&quot;http://java.sun.com/jsf/core&quot;</span>
+<span class="ot">      xmlns:my=</span><span class="st">&quot;http://asanzdiego.com/taglibs&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;h:body&gt;</span>
+  <span class="kw">&lt;h:form</span><span class="ot"> id=</span><span class="st">&quot;mainForm&quot;</span> <span class="kw">&gt;</span>
+    <span class="kw">&lt;h:panelGrid</span><span class="ot"> columns=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;my:buttons</span><span class="ot"> actionLabel=</span><span class="st">&quot;Press me&quot;</span>
+<span class="ot">        actionBean=</span><span class="st">&quot;#{helloWorld}&quot;</span>
+<span class="ot">        actionMethod=</span><span class="st">&quot;send&quot;</span>
+<span class="ot">        resetLabel=</span><span class="st">&quot;Reset&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;/h:panelGrid&gt;</span>
+  <span class="kw">&lt;/h:form&gt;</span>
+<span class="kw">&lt;/h:body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+</section><section id="composite-components-vs-custom-tags" class="slide level2">
+<h2><span class="header-section-number">15.6</span> Composite Components VS Custom Tags</h2>
+<ul>
+<li><p>Coposite components, es más sencillo y rápido de programar, pero es menos flexible.</p></li>
+<li><p>Los composite components, JSF los trata como un componente &quot;todo en uno&quot;.</p></li>
+<li><p>Mientras que con las librerías personalizadas, cada uno de los componentes utilizados, JSF los trata por separado.</p></li>
+<li><p>Si necesitamos algo más sofisticado que las librerías personalizadas, ya tenemos que crear componentes, creando su correspondiente clase java y al menos un render. Afortunadamente para el 90% de los casos con composite components o con librerías personalizadas tendremos suficiente.</p></li>
+</ul>
+</section>
+
+<!--footer id="footer">
+  <h4 class="author"> Adolfo Sanz De Diego  - Junio 2013</h4>
+</footer-->
+
+<!-- deck goto extension html -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck navigation extension html -->
+<div aria-role="navigation">
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+</div>
+
+<!-- deck status extension html -->
+<p class="deck-status" aria-role="status">
+  <span class="deck-status-current"></span>
+  /
+  <span class="deck-status-total"></span>
+</p>
+
+<!-- jquery  -->
+<script src="../lib/deck.js-master/jquery.min.js"></script>
+
+<!-- deck core js  -->
+<script src="../lib/deck.js-master/core/deck.core.js"></script>
+
+<!-- deck extension js -->
+<script src="../lib/deck.js-master/extensions/goto/deck.goto.js"></script>
+<script src="../lib/deck.js-master/extensions/menu/deck.menu.js"></script>
+<script src="../lib/deck.js-master/extensions/navigation/deck.navigation.js"></script>
+<script src="../lib/deck.js-master/extensions/scale/deck.scale.js"></script>
+<script src="../lib/deck.js-master/extensions/status/deck.status.js"></script>
+<!--script src="../lib/deck.search.js-master/search/deck.search.js"></script-->
+
+<!-- Initialize the deck. -->
+<script>
+$(function() {
+    $.deck('.slide');
+});
+</script>
+
+</body>
+</html>

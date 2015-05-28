@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:p="http://primefaces.org/ui">
+<h:head>
+  <title>Hello World</title>
+</h:head>
+<h:body>
+  <h:outputStylesheet name="style.css" library="css" />
+  <div id="container">
+    <h1>MyFaces Hello World</h1>
+
+    <h:form id="main">
+
+      <p:dataTable id="personsTable" value="#{helloWorld.persons}"
+        var="person" paginator="true" rows="2"
+        paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+        rowsPerPageTemplate="2,4,6">
+
+        <f:facet name="header">Persons</f:facet>
+        <p:column sortBy="#{person.name}" filterBy="#{person.name}"
+          filterMatchMode="contains">
+          <f:facet name="header">Name</f:facet>
+          <p:inputText value="#{person.name}"
+            rendered="#{person.editable}" />
+          <h:outputText value="#{person.name}"
+            rendered="#{not person.editable}" />
+        </p:column>
+        <p:column sortBy="#{person.age}" filterBy="#{person.age}"
+          filterMatchMode="contains">
+          <f:facet name="header">Age</f:facet>
+          <p:inputText value="#{person.age}"
+            rendered="#{person.editable}" />
+          <h:outputText value="#{person.age}"
+            rendered="#{not person.editable}" />
+        </p:column>
+        <p:column exportable="false">
+          <f:facet name="header">Action</f:facet>
+          <p:commandLink value="Edit" update="personsTable"
+            rendered="#{not person.editable}"
+            action="#{helloWorld.editAction(person)}" />
+          <h:outputText value=" - " rendered="#{not person.editable}" />
+          <p:commandLink value="Delete" update="personsTable"
+            action="#{helloWorld.deleteAction(person)}" />
+        </p:column>
+        <f:facet name="footer">
+          <p:commandButton value="Save Changes" update="personsTable"
+            action="#{helloWorld.saveAction}" />
+        </f:facet>
+      </p:dataTable>
+
+      <h:panelGrid columns="2">
+        <p:panel header="Export All Data">
+          <h:commandLink>
+            <p:graphicImage value="/resources/images/xls.png" />
+            <p:dataExporter type="xls" target="personsTable" fileName="persons" />
+          </h:commandLink>
+
+          <h:commandLink>
+            <p:graphicImage value="/resources/images/pdf.png" />
+            <p:dataExporter type="pdf" target="personsTable" fileName="persons" />
+          </h:commandLink>
+
+          <h:commandLink>
+            <p:graphicImage value="/resources/images/csv.png" />
+            <p:dataExporter type="csv" target="personsTable" fileName="persons" />
+          </h:commandLink>
+
+          <h:commandLink>
+            <p:graphicImage value="/resources/images/xml.png" />
+            <p:dataExporter type="xml" target="personsTable" fileName="persons" />
+          </h:commandLink>
+        </p:panel>
+
+        <p:panel header="Export Page Data">
+          <h:commandLink>
+            <p:graphicImage value="/resources/images/excel.png" />
+            <p:dataExporter type="xls" target="personsTable" fileName="persons"
+              pageOnly="true" />
+          </h:commandLink>
+
+          <h:commandLink>
+            <p:graphicImage value="/resources/images/pdf.png" />
+            <p:dataExporter type="pdf" target="personsTable" fileName="persons"
+              pageOnly="true" />
+          </h:commandLink>
+
+          <h:commandLink>
+            <p:graphicImage value="/resources/images/csv.png" />
+            <p:dataExporter type="csv" target="personsTable" fileName="persons"
+              pageOnly="true" />
+          </h:commandLink>
+
+          <h:commandLink>
+            <p:graphicImage value="/resources/images/xml.png" />
+            <p:dataExporter type="xml" target="personsTable" fileName="persons"
+              pageOnly="true" />
+          </h:commandLink>
+        </p:panel>
+      </h:panelGrid>
+
+
+      <p:panelGrid columns="2">
+        <p:outputLabel for="name" value="Name" />
+        <p:inputText id="name" value="#{helloWorld.person.name}" />
+        <p:outputLabel for="age" value="Age" />
+        <p:inputText id="age" value="#{helloWorld.person.age}" />
+      </p:panelGrid>
+
+      <p:commandButton value="Add" update="personsTable"
+        action="#{helloWorld.addAction}" />
+      <p:messages showDetail="true" showSummary="false" />
+
+    </h:form>
+
+  </div>
+</h:body>
+</html>

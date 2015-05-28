@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:p="http://primefaces.org/ui">
+<h:head>
+  <title>Hello World</title>
+</h:head>
+<h:body>
+  <h:outputStylesheet name="style.css" library="css" />
+  <div id="container">
+    <h1>MyFaces Hello World</h1>
+
+    <h:form id="main">
+
+      <p:themeSwitcher>
+        <f:selectItem itemLabel="Select One" itemValue="" />
+        <f:selectItem itemLabel="After Dark" itemValue="afterdark" />
+        <f:selectItem itemLabel="Blue Sky" itemValue="bluesky" />
+        <f:selectItem itemLabel="Glass-X" itemValue="glass-x" />
+        <f:selectItem itemLabel="Start" itemValue="start" />
+      </p:themeSwitcher>
+
+      <p:separator />
+
+      <p:panel header="Panel">Panel Content</p:panel>
+
+      <br />
+
+      <p:toolbar>
+        <p:toolbarGroup align="left">
+          <p:commandButton type="button" value="New"
+            icon="ui-icon-document" />
+
+          <p:commandButton type="button" value="Open"
+            icon="ui-icon-folder-open" />
+
+          <p:separator />
+
+          <p:commandButton type="button" title="Save"
+            icon="ui-icon-disk" />
+          <p:commandButton type="button" title="Delete"
+            icon="ui-icon-trash" />
+          <p:commandButton type="button" title="Print"
+            icon="ui-icon-print" />
+        </p:toolbarGroup>
+
+        <p:toolbarGroup align="right">
+          <p:menuButton value="Navigate">
+            <p:menuitem value="Home" url="http://www.primefaces.org" />
+            <p:menuitem value="ShowCase"
+              url="http://www.primefaces.org/showcase" />
+            <p:menuitem value="TouchFaces"
+              url="http://www.primefaces.org/showcase/touch" />
+          </p:menuButton>
+        </p:toolbarGroup>
+
+      </p:toolbar>
+
+      <br />
+
+      <p:tabView>
+        <p:tab title="Tab1">Tab1 Content</p:tab>
+        <p:tab title="Tab2">Tab2 Content</p:tab>
+        <p:tab title="Tab3">Tab3 Content</p:tab>
+      </p:tabView>
+
+    </h:form>
+
+  </div>
+</h:body>
+</html>

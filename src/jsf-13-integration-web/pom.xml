@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>curso</groupId>
+  <artifactId>jsf-13-integration-web</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>jsf-13-integration-web</name>
+  <description>A custom project using MyFaces 2.0</description>
+  <url>http://www.myorganization.org</url>
+
+  <properties>
+    <jsf-myfaces.version>2.1.7</jsf-myfaces.version>
+    <org.springframework-version>3.1.3.RELEASE</org.springframework-version>
+  </properties>
+
+  <build>
+    <finalName>jsf-13-integration-web</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!-- Project dependencies -->
+  <dependencies>
+
+    <!-- My Dependencies -->
+    <dependency>
+      <groupId>curso</groupId>
+      <artifactId>jsf-13-integration-model</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>curso</groupId>
+      <artifactId>jsf-13-integration-service</artifactId>
+      <version>0.0.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>curso</groupId>
+      <artifactId>jsf-13-integration-service-impl</artifactId>
+      <version>0.0.1</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- Spring -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${org.springframework-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${org.springframework-version}</version>
+    </dependency>
+
+    <!-- MyFaces -->
+    <dependency>
+      <groupId>org.apache.myfaces.core</groupId>
+      <artifactId>myfaces-api</artifactId>
+      <version>${jsf-myfaces.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.myfaces.core</groupId>
+      <artifactId>myfaces-impl</artifactId>
+      <version>${jsf-myfaces.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+      <scope>runtime</scope>
+    </dependency>
+
+  </dependencies>
+
+</project>
